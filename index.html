@@ -1,0 +1,9 @@
+<video autoplay="autoplay" width="100%" height="auto"></video>
+
+<script>
+window.URL = window.URL || window.webkitURL;
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+    navigator.getUserMedia({audio:false,video:true},function(stream){
+        document.querySelector('video').src=window.URL.createObjectURL(stream);
+    });
+</script>
